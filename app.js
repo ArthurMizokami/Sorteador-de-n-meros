@@ -6,6 +6,10 @@ function sortear() {
     let sorteados = [];
     let numero;
 
+    if (de >= ate) { 
+        alert `Escolha números quais, o segundo seja maior que o primeiro!`;
+    }
+
     for (let i = 0; i < quantidade; i++) {
         numero = obterNumeroAleatorio(de, ate);
 
@@ -43,4 +47,4 @@ function reiniciar() {
     document.getElementById('resultado').innerHTML = `<label class="texto__paragrafo">Números sorteados:  nenhum até agora</label>`
     alterarStatusBotao();
 }
-//version 1.0.0
+//version 1.0.2
