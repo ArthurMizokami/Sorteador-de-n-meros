@@ -7,18 +7,24 @@ function sortear() {
     let numero;
 
     if (de >= ate) { 
-        alert `Escolha números quais, o segundo seja maior que o primeiro!`;
+        alert `O número inicial é menor que o número final!`;
+    }
+
+    if (quantidade > (ate - de + 1)) {
+        alert `A quantidade de números não pode ser maior que o intervalor entre os números!`;
+        return;
     }
 
     for (let i = 0; i < quantidade; i++) {
         numero = obterNumeroAleatorio(de, ate);
-
+    
         while (sorteados.includes(numero)) {
-            numero = obterNumeroAleatorio(de, ate);
+          numero = obterNumeroAleatorio(de, ate);
+          alert('Tentando obter número inédito');
         }
-
+    
         sorteados.push(numero);
-    }
+      }
     
     let resultado = document.getElementById('resultado');
     resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados: ${sorteados} </label>`
