@@ -43,3 +43,4 @@ function reiniciar() {
     document.getElementById('resultado').innerHTML = `<label class="texto__paragrafo">Números sorteados:  nenhum até agora</label>`
     alterarStatusBotao();
 }
+//version 1.0.0
